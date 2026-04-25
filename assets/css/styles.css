@@ -11,7 +11,7 @@
     --color-texto-general: #212529;
     --color-texto-hero: #ffffff;
     /* El hero siempre tiene fondo oscuro/imagen */
-    --color-texto-cards: #212529;
+    --color-texto-cards: #ffffff;
     /* Solicitado explícitamente */
 
     /* Títulos */
@@ -24,7 +24,7 @@
 
     /* Fondos y Estructura */
     --color-fondo-general: #FBF4EA;
-    --color-fondo-cards: #ffffff;
+    --color-fondo-cards: #4D7A9B;
     --color-overlay-hero: #000000cd;
     --color-borde-sutil: rgba(0, 0, 0, 0.1);
 
