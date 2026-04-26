@@ -114,6 +114,14 @@ h3 {
     cursor: pointer;
 }
 
+.logo.logo-hidden {
+    transform: scale(0.8);
+}
+
+.logo.logo-hidden:hover {
+    transform: scale(1.2);
+}
+
 .nav-links {
     list-style: none;
     display: flex;

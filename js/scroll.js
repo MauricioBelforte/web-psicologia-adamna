@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", function() {
         /* --condicon para ocultar o mostrar el menu */
         if (ubicacionPrincipal >= desplazamientoActual || desplazamientoActual < 50) {
             /* --si es mayor o igual se muesta (Scroll UP) o si estamos muy arriba */
-            logo.style.transform = "scale(1)";
+            logo.classList.remove("logo-hidden");
             $nav.style.top = "0px";
         } else {
             /* --sino lo ocultamos añadiendo un top negativo (Scroll DOWN) */
             $nav.style.top = "-100px";
-            logo.style.transform = "scale(0.8)";
+            logo.classList.add("logo-hidden");
         }
 
         /* --actulizamos la ubicacion principal */
