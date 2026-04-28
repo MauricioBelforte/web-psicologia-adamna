@@ -1,8 +1,19 @@
 {
-  "nombre": "Espacio Psicológico Conexión",
+  "nombre": "Lic. Adamna Mazú",
+  "titulo": "Psicóloga infanto-juvenil y de adultos",
   "categoria": "Psicólogos",
-  "direccion": "San Martín 678, Trelew, Chubut",
-  "telefono": "+54 9 280 4357890",
+  "matriculas": {
+    "provincial": "M.P. 688",
+    "nacional": "M.N. 82481"
+  },
+  "diplomatura": "Diplomada por la Asociación Argentina de Salud Mental",
+  "direccion": "San Martín 678, Río Turbio, Santa Cruz",
+  "ubicaciones": {
+    "presencial": ["Río Turbio", "La Plata"],
+    "online": "Todo el país"
+  },
+  "telefono_whatsapp": "+54 9 2966 486745",
+  "email": "mazuadamna@gmail.com",
   "rating": "4.9",
   "horarios_detallados": [
     "Lunes: 09:00-13:00, 16:00-20:00",
@@ -25,6 +36,15 @@
       "rating": "5 estrellas"
     }
   ],
-  "facebook": "https://facebook.com/EspacioPsicologicoConexion",
-  "instagram": "https://instagram.com/espaciopsicologiconexion"
+  "redes_sociales": {
+    "instagram": "https://www.instagram.com/ada.psicologa/",
+    "tiktok": "",
+    "facebook": ""
+  },
+  "recursos_drive": {
+    "guia_bullying": "",
+    "material_docente": "",
+    "bibliografia_cursos": "",
+    "material_psicotecnicos": ""
+  }
 }
