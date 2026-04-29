@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espacio Psicológico Conexión | Oficial</title>
+    <title>Lic. Adamna Mazú | Psicóloga</title>
+    <meta name="description"
+        content="Lic. Adamna Mazú - Psicóloga infanto-juvenil y de adultos. Atención presencial en Río Turbio y La Plata, y online en todo el país. Especialista en violencia escolar y conflictos familiares.">
+    <meta name="keywords"
+        content="psicóloga, Río Turbio, La Plata, salud mental, terapia online, Adamna Mazú, psicología infantil, bullying, violencia escolar">
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link
@@ -19,10 +23,12 @@
         </a>
         <ul class="nav-links">
             <li><a href="#hero" class="normal">Inicio</a></li>
-            <li><a href="#beneficios" class="normal">Beneficios</a></li>
+            <li><a href="#sobre-mi" class="normal">Sobre mí</a></li>
+            <li><a href="#servicios" class="normal">Servicios</a></li>
+            <li><a href="#recursos" class="normal">Recursos</a></li>
             <li><a href="#testimonios" class="normal">Testimonios</a></li>
         </ul>
-        <a href="#contacto" class="btn"><button>Contacto</button></a>
+        <a href="#contacto" class="btn"><button>Turnos</button></a>
         <a onclick="openNav()" class="menu-hamburguesa" href="#"><button><img
                     src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg" width="40" height="40"
                     alt="Menú"></button></a>
@@ -30,7 +36,9 @@
             <a onclick="closeNav()" class="close normal" href="#">&times;</a>
             <div class="overlay-content">
                 <a onclick="closeNav()" class="normal" href="#hero">Inicio</a>
-                <a onclick="closeNav()" class="normal" href="#beneficios">Beneficios</a>
+                <a onclick="closeNav()" class="normal" href="#sobre-mi">Sobre mí</a>
+                <a onclick="closeNav()" class="normal" href="#servicios">Servicios</a>
+                <a onclick="closeNav()" class="normal" href="#recursos">Recursos</a>
                 <a onclick="closeNav()" class="normal" href="#testimonios">Testimonios</a>
                 <a onclick="closeNav()" class="normal" href="#contacto">Contacto</a>
             </div>
@@ -39,67 +47,247 @@
 
     <main>
         <section id="hero" class="seccion-hero">
-            <h1 class="el-messiri" style="text-transform: capitalize;">PSICOLOGA</h1>
-            <!--  <p class="hero-subtitle">Profesionalismo, calidez y contención</p> -->
+            <p class="hero-subtitulo-superior">Psicóloga infanto-juvenil y de adultos</p>
+            <h1 class="el-messiri">Lic. Adamna Mazú</h1>
+
             <div class="hero-info">
-                <!--  <p class="hero-role">Psicóloga</p> -->
-                <p class="hero-name">Lic. Adamna Mazu</p>
-                <p class="hero-registro">MP N°688</p>
-                <p class="hero-registro" enb>MN N°82481</p>
+                <p class="hero-registro">M.P. 688 | M.N. 82481</p>
+                <p class="hero-experiencia">Más de 10 años de experiencia en intervenciones en contextos educativos y en
+                    problemáticas complejas.</p>
             </div>
-            <a href="#contacto" class="cta-button">Contactar</a>
-            <p
-                style="text-transform: uppercase; font-family: var(--fuente-clasica); font-size: 1.5rem; font-weight:100; letter-spacing: -1px; margin-top: 20vh;margin-bottom: 0.5rem; font-weight: 700;">
-                Diplomada por la asociación argentina de salud mental</p>
+
+            <a href="#contacto" class="cta-button">Solicitar turno</a>
+
+            <h2 class="hero-diploma">Diplomada por la Asociación Argentina de Salud Mental</h2>
         </section>
 
-        <section id="sobre-nosotros" class="seccion-ubicacion">
-            <!-- <h2 class="libre-baskerville">Sobre Nosotros</h2> -->
-            <div class="sobre-nosotros-imagen">
-                <img src="assets/img/sobre_nosotros.jpeg" alt="Sobre Nosotros" />
+        <section id="validacion" class="seccion-validacion">
+            <div class="validacion-contenido">
+                <h2 class="libre-baskerville">Atención integral</h2>
+                <p class="validacion-texto">Atención a niños, adolescentes, adultos y familias</p>
+                <p class="validacion-ubicacion">Presencial en <strong>Río Turbio</strong> y <strong>La Plata</strong> |
+                    Online en todo el país</p>
             </div>
-            <p style="max-width: 800px; margin: 0 auto 5rem; font-size: 1.2rem;">Bienvenido a Espacio Psicológico
-                Conexión. Acá, en Río Turbio, vas a encontrar un refugio de profesionalismo, calidez y contención. Te
-                acompañamos a explorar tus emociones y potenciar tu bienestar personal.</p>
 
-            <!-- NUEVO: Sección de Horarios (Implementación V2) -->
-            <div style="margin-top: 2rem; padding-top: 5.5rem; border-top: 1px solid var(--color-borde-sutil);">
-                <h3 class="libre-baskerville" style="font-size: 2rem; margin-bottom: 1rem;">Horarios</h3>
-                <p id="estado-horario"
-                    style="font-weight: bold; font-size: 1.5rem; color: var(--color-titulos); margin-bottom: 0.5rem;">
-                    Cerrado</p>
-                <p id="proximo-horario" style="font-size: 1.2rem; margin-bottom: 1.5rem;">Abre mañana a las 09:00</p>
+            <div class="galeria-profesional">
+                <div class="foto-marco"><img src="assets/img/adamna/adamna-1.jpeg"
+                        alt="Lic. Adamna Mazú - Retrato Profesional" loading="lazy"></div>
+                <div class="foto-marco"><img src="assets/img/adamna/adamna-2.jpeg"
+                        alt="Lic. Adamna Mazú - Contexto Laboral" loading="lazy"></div>
+                <div class="foto-marco"><img src="assets/img/adamna/adamna-3.jpeg" alt="Lic. Adamna Mazú - Sesión"
+                        loading="lazy"></div>
+                <div class="foto-marco"><img src="assets/img/adamna/adamna-4.jpeg" alt="Lic. Adamna Mazú - Consultorio"
+                        loading="lazy"></div>
+                <div class="foto-marco"><img src="assets/img/adamna/adamna-5.jpeg" alt="Lic. Adamna Mazú - Equipo"
+                        loading="lazy"></div>
+            </div>
+        </section>
 
-                <!-- Horarios detallados -->
-                <div style="font-size: 1.1rem; color: var(--color-texto-general); opacity: 0.9;">
-                    <p>Lunes: 09:00-13:00, 16:00-20:00</p>
-                    <p>Martes: 09:00-13:00, 16:00-20:00</p>
-                    <p>Miércoles: 09:00-13:00, 16:00-20:00</p>
-                    <p>Jueves: 09:00-13:00, 16:00-20:00</p>
-                    <p>Viernes: 09:00-13:00, 16:00-20:00</p>
-                    <p>Sábado: 10:00-14:00</p>
-                    <p>Domingo: Cerrado</p>
+        <section id="sobre-mi" class="seccion-sobre-mi">
+            <div class="sobre-mi-contenedor">
+                <div class="sobre-mi-imagen">
+                    <img src="assets/img/sobre_nosotros.jpeg" alt="Lic. Adamna Mazú" />
+                </div>
+                <div class="sobre-mi-texto">
+                    <h2 class="el-messiri">Sobre mí</h2>
+                    <p>Soy Licenciada en Psicología por la Universidad Nacional de La Plata, con formación y trayectoria
+                        en el campo clínico, educativo y comunitario.</p>
+                    <p>Mi trabajo se construye desde una mirada integral de la salud mental, entendiendo que cada
+                        persona, familia o institución necesita ser abordada en su contexto, su historia y sus vínculos.
+                    </p>
+
+                    <h3>Especializaciones:</h3>
+                    <ul class="lista-especialidades">
+                        <li>Violencia escolar</li>
+                        <li>Conflictos familiares</li>
+                        <li>Desarrollo infantil</li>
+                        <li>Convivencia en instituciones educativas</li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+            <div class="sobre-mi-cierre">
+                <p>He formado parte de equipos hospitalarios, proyectos de investigación y espacios de intervención
+                    en escuelas y comunidades. Actualmente continúo mi formación como candidata a Magíster en
+                    Psicología Educacional, profundizando el trabajo en infancia, familia y contextos educativos.
+                </p>
+
+                <p class="destacado-sobre-mi">Trabajo desde una combinación de <strong>rigurosidad
+                        profesional</strong>, <strong>escucha cercana</strong> e <strong>intervenciones
+                        respetuosas</strong>.</p>
+            </div>
+        </section>
+
+        <section id="autoridad" class="seccion-autoridad">
+            <h2 class="el-messiri">Autoridad Profesional</h2>
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta-autoridad">
+                    <h3 class="libre-baskerville">Formación</h3>
+                    <ul>
+                        <li>Licenciada en Psicología — Universidad Nacional de La Plata</li>
+                        <li>Profesora de Psicología — UNLP</li>
+                        <li>Diplomada en Psicología Infantil — Asociación Argentina de Salud Mental</li>
+                        <li>Candidata a Magíster en Psicología Educacional</li>
+                    </ul>
+                </article>
+                <article class="tarjeta-autoridad">
+                    <h3 class="libre-baskerville">Experiencia</h3>
+                    <ul>
+                        <li>Atención clínica a niños, adolescentes y adultos</li>
+                        <li>Trabajo con familias</li>
+                        <li>Psicodiagnóstico y evaluaciones psicológicas</li>
+                        <li>Psicóloga en Hospital SAMIC El Calafate</li>
+                    </ul>
+                </article>
+                <article class="tarjeta-autoridad">
+                    <h3 class="libre-baskerville">Investigación académica</h3>
+                    <ul>
+                        <li>Participación en proyectos de investigación en UNLP</li>
+                        <li>Trabajo en extensión universitaria en escuelas</li>
+                        <li>Participación en congresos nacionales e internacionales</li>
+                        <li>Coautora de libro sobre convivencia y violencia en contextos educativos</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="servicios" class="seccion-servicios">
+            <h2 class="el-messiri">Servicios</h2>
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta-servicio">
+                    <h3 class="libre-baskerville">Atención clínica</h3>
+                    <p>Acompañamiento psicológico para:</p>
+                    <ul>
+                        <li>Niños</li>
+                        <li>Adolescentes</li>
+                        <li>Adultos</li>
+                        <li>Familias</li>
+                    </ul>
+                </article>
+                <article class="tarjeta-servicio">
+                    <h3 class="libre-baskerville">Problemáticas que abordo</h3>
+                    <ul>
+                        <li>Conducta infantil</li>
+                        <li>Bullying y Violencia escolar</li>
+                        <li>Conflictos familiares</li>
+                        <li>Desarrollo infantil</li>
+                        <li>Dificultades emocionales</li>
+                    </ul>
+                </article>
+                <article class="tarjeta-servicio">
+                    <h3 class="libre-baskerville">Evaluaciones</h3>
+                    <ul>
+                        <li>Psicodiagnóstico</li>
+                        <li>Informes psicológicos</li>
+                        <li>Psicofísicos laborales</li>
+                        <li>Evaluaciones para instituciones</li>
+                    </ul>
+                </article>
+                <article class="tarjeta-servicio">
+                    <h3 class="libre-baskerville">Psicología jurídica y forense</h3>
+                    <p>Intervenciones y evaluaciones en contextos legales, con responsabilidad profesional y rigurosidad
+                        técnica.</p>
+                </article>
+                <article class="tarjeta-servicio">
+                    <h3 class="libre-baskerville">Trabajo institucional</h3>
+                    <ul>
+                        <li>Talleres y Capacitaciones</li>
+                        <li>Charlas preventivas</li>
+                        <li>Intervenciones en escuelas</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="enfoque" class="seccion-enfoque">
+            <div class="enfoque-contenedor">
+                <h2 class="el-messiri">Enfoque de Trabajo</h2>
+                <ul class="lista-enfoque">
+                    <li><strong>Enfoque integral:</strong> no solo el síntoma, sino el contexto.</li>
+                    <li><strong>Perspectiva psicoanalítica</strong> (aportes de Silvia Bleichmar).</li>
+                    <li><strong>Enfoque de derechos humanos.</strong></li>
+                    <li><strong>Perspectiva socio-histórica</strong> (Lev Vygotsky).</li>
+                    <li><strong>Trabajo articulado</strong> con instituciones educativas.</li>
+                </ul>
+
+                <div class="encuadre-profesional">
+                    <h3 class="libre-baskerville">Encuadre profesional</h3>
+                    <p>La articulación con instituciones se realiza desde un posicionamiento clínico, resguardando la
+                        singularidad de cada caso y evitando la reducción del trabajo a la mera emisión de informes.</p>
                 </div>
             </div>
         </section>
 
+        <section id="recursos" class="seccion-recursos">
+            <h2 class="el-messiri">Recursos Profesionales</h2>
+            <p class="recursos-intro">Materiales orientados a familias, docentes e instituciones para el acompañamiento
+                de distintas problemáticas.</p>
+            <div class="recursos-grid">
+                <a href="#" target="_blank" class="boton-recurso">
+                    <span class="icono-recurso">📄</span>
+                    <span class="texto-recurso">Guía sobre bullying</span>
+                </a>
+                <a href="#" target="_blank" class="boton-recurso">
+                    <span class="icono-recurso">📚</span>
+                    <span class="texto-recurso">Material docente</span>
+                </a>
+                <a href="#" target="_blank" class="boton-recurso">
+                    <span class="icono-recurso">📖</span>
+                    <span class="texto-recurso">Bibliografía de cursos</span>
+                </a>
+                <a href="#" target="_blank" class="boton-recurso">
+                    <span class="icono-recurso">📝</span>
+                    <span class="texto-recurso">Material para psicotécnicos</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="intervenciones" class="seccion-intervenciones">
+            <h2 class="el-messiri">Intervenciones</h2>
+            <p class="intervenciones-intro">Espacios de trabajo en instituciones educativas y comunitarias, orientados a
+                la prevención, la intervención y la construcción de convivencia.</p>
+
+            <div class="galeria-intervenciones">
+                <div class="intervencion-foto"><img src="assets/img/WhatsApp Image 2026-04-18 at 2.48.05 PM.jpeg"
+                        alt="Taller institucional" loading="lazy"></div>
+                <div class="intervencion-foto"><img src="assets/img/WhatsApp Image 2026-04-18 at 2.48.05 PM (1).jpeg"
+                        alt="Charla comunitaria" loading="lazy"></div>
+                <div class="intervencion-foto"><img src="assets/img/sobre_nosotros.jpeg" alt="Actividad en escuela"
+                        loading="lazy"></div>
+            </div>
+        </section>
+
         <section id="beneficios" class="seccion-beneficios">
-            <h2 class="el-messiri">Por qué elegirnos</h2>
+            <h2 class="el-messiri">¿Por qué elegir este espacio?</h2>
             <div class="contenedor-tarjetas">
-                <article class="tarjeta-producto tarjeta-beneficio">
-                    <h3 class="libre-baskerville">✓ Profesionalismo y calidez</h3>
+                <article class="tarjeta-beneficio">
+                    <h3 class="libre-baskerville">Profesionalismo y calidez</h3>
+                    <a href="#sobre-mi" class="enlace-beneficio">Conocé más sobre mí <span>→</span></a>
                 </article>
-                <article class="tarjeta-producto tarjeta-beneficio">
-                    <h3 class="libre-baskerville">✓ Contención real</h3>
+                <article class="tarjeta-beneficio">
+                    <h3 class="libre-baskerville">Empatía real</h3>
+                    <a href="#intervenciones" class="enlace-beneficio">Ver intervenciones <span>→</span></a>
                 </article>
-                <article class="tarjeta-producto tarjeta-beneficio">
-                    <h3 class="libre-baskerville">✓ Bienestar emocional guiado</h3>
+                <article class="tarjeta-beneficio">
+                    <h3 class="libre-baskerville">Confidencialidad absoluta</h3>
+                    <a href="#enfoque" class="enlace-beneficio">Nuestro enfoque <span>→</span></a>
+                </article>
+                <article class="tarjeta-beneficio">
+                    <h3 class="libre-baskerville">Amplia experiencia</h3>
+                    <a href="#autoridad" class="enlace-beneficio">Autoridad profesional <span>→</span></a>
                 </article>
             </div>
         </section>
 
         <section id="testimonios" class="seccion-productos">
-            <h2 class="el-messiri">Experiencias de nuestros clientes</h2>
+            <h2 class="el-messiri">Experiencia de pacientes</h2>
+            <div class="google-badge">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Settings_icon.svg" alt="Google"
+                    width="20">
+                <span>Opiniones reales en Google Maps</span>
+            </div>
             <div class="contenedor-tarjetas">
                 <article class="tarjeta-testimonio">
                     <img src="assets/img/testimonio_sintetico_0.jpg" alt="Foto de Mariana R.">
@@ -138,33 +326,80 @@
                 target="_blank" class="cta-button" style="margin-top: 1.5rem;">VER EN MAPA</a>
         </section>
 
+        <section id="cierre" class="seccion-cierre">
+            <div class="cierre-contenedor">
+                <p class="cierre-emocional">Pedir ayuda no siempre es fácil.<br>Pero puede ser el primer paso para que
+                    algo empiece a cambiar.</p>
+                <p class="cierre-invitacion">Si estás atravesando una situación que te preocupa, puedo acompañarte.</p>
+
+                <div class="cierre-acciones">
+                    <a href="https://wa.me/2966486745" class="cta-button">Solicitar turno</a>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/ada.psicologa/" target="_blank"
+                            class="social-icon instagram active-link" aria-label="Instagram">
+                            <svg fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title>Instagram</title>
+                                <path
+                                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.936 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.314.936 20.644.523 19.854.218 19.095-.08 18.225-.282 16.947-.341 15.667-.398 15.26-.413 12-.413h0zm0 2.163c3.204 0 3.584.012 4.85.07 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.055 1.17-.249 1.805-.413 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.057.36-2.227.413-1.266.057-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.055-1.805-.249-2.227-.413-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.36-1.057-.413-2.227-.057-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.055-1.17.249-1.805.413-2.227.217-.562.477.96.896-1.382.42-.419.819.679 1.381-.896.422-.164 1.057.36 2.227-.413 1.266-.057 1.646-.07 4.85.07zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z" />
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" class="social-icon tiktok active-link" aria-label="TikTok">
+                            <svg fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title>TikTok</title>
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.06-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.03-1.03-2.28-1.39-3.41-4.06-3.07-6.68.28-2.48 2.02-4.66 4.39-5.41.87-.28 1.76-.41 2.67-.36.01 1.29.01 2.58.01 3.87-.02-.01-.05-.01-.08-.01-.54-.09-1.1-.01-1.59.24-.7.32-1.18 1.01-1.25 1.75-.17 1.01.31 2.06 1.14 2.63.81.55 1.85.56 2.65.02.58-.4 1-1.04 1.05-1.72.03-1.94.01-3.89.01-5.83-.01-4.25 0-8.5-.01-12.75z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <a href="https://wa.me/2966486745" class="posicion-fixed" aria-label="Contactar por WhatsApp">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="50" height="50">
     </a>
 
+    <footer id="contacto" class="footer-principal">
+        <div class="footer-contenedor">
+            <div class="footer-info">
+                <img src="assets/img/logo.png" alt="Logo Lic. Adamna Mazú" class="footer-logo">
+                <h2 class="el-messiri">Lic. Adamna Mazú</h2>
+                <p class="footer-registro">M.P. 688 | M.N. 82481</p>
+                <div class="footer-detalles">
+                    <p><strong>Ubicación:</strong> San Martín 678, Río Turbio, Santa Cruz</p>
+                    <p><strong>Email:</strong> <a href="mailto:mazuadamna@gmail.com">mazuadamna@gmail.com</a></p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/2966486745">+54 9 2966 486745</a></p>
+                </div>
+            </div>
 
-    <footer id="contacto"
-        style="background: #181818; padding: 4rem 2rem; text-align: center; color: #aaa; font-size: 0.9rem;">
-        <h2 class="el-messiri" style="color: white; margin-bottom: 2rem;">Contacto y Redes Sociales</h2>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/ada.psicologa/?hl=es-la" target="_blank"
-                class="social-icon instagram active-link" aria-label="Instagram"><svg fill="currentColor" role="img"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd">
-                    <title>Instagram</title>
-                    <path
-                        d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.936 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.314.936 20.644.523 19.854.218 19.095-.08 18.225-.282 16.947-.341 15.667-.398 15.26-.413 12-.413h0zm0 2.163c3.204 0 3.584.012 4.85.07 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.055 1.17-.249 1.805-.413 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.057.36-2.227.413-1.266.057-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.055-1.805-.249-2.227-.413-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.36-1.057-.413-2.227-.057-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.055-1.17.249-1.805.413-2.227.217-.562.477.96.896-1.382.42-.419.819.679 1.381-.896.422-.164 1.057.36 2.227-.413 1.266-.057 1.646-.07 4.85.07zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z" />
-                </svg></a>
-            <a href="https://facebook.com/EspacioPsicologicoConexion" target="_blank"
-                class="social-icon facebook active-link" aria-label="Facebook"><svg fill="currentColor" role="img"
-                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <title>Facebook</title>
-                    <path
-                        d="M22.675 0h-21.35C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.732 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
-                </svg></a>
+            <div class="footer-horarios">
+                <h3 class="libre-baskerville">Horarios de atención</h3>
+                <p id="estado-horario" class="estado-horario">Cerrado</p>
+                <p id="proximo-horario" class="proximo-horario">Abre mañana a las 09:00</p>
+                <div class="horarios-lista">
+                    <p><span>Lunes a Viernes:</span> 09:00-13:00, 16:00-20:00</p>
+                    <p><span>Sábado:</span> 10:00-14:00</p>
+                    <p><span>Domingo:</span> Cerrado</p>
+                </div>
+            </div>
+
+            <div class="footer-mapa">
+                <h3 class="libre-baskerville">Encontranos aquí</h3>
+                <div class="mapa-contenedor">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d-72.3333!3d-51.5333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDMyJzAwLjAiUyA3MsKwMjAnMDAuMCJX!5e0!3m2!1ses-419!2sar!4v1620000000000!5m2!1ses-419!2sar"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <a href="https://maps.app.goo.gl/R5p9D2U5Zz9z9z9z9" target="_blank" class="enlace-mapa">Abrir en
+                        Google Maps</a>
+                </div>
+            </div>
         </div>
-        <p style="margin-top: 2rem;">&copy; 2026 Espacio Psicológico Conexión. Todos los derechos reservados.</p>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Lic. Adamna Mazú. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
 
