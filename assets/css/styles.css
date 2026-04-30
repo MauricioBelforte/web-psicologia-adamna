@@ -493,8 +493,9 @@ main {}
 }
 
 .tarjeta-autoridad {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #fbf4ea;
+    color: var(--color-texto-general);
+    border: 1px solid ;
     padding: 2.5rem;
     border-radius: 1.5rem;
     text-align: left;
@@ -502,16 +503,17 @@ main {}
 }
 
 .tarjeta-autoridad:hover {
-    background: rgba(255, 255, 255, 0.06);
+    background: #f3ebdf;
     transform: translateY(-8px);
 }
 
 .tarjeta-autoridad h3 {
-    color: #afae81;
+    color: #4d7a9b;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
     border-bottom: 1px solid rgba(69, 130, 146, 0.3);
     padding-bottom: 0.8rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0);
 }
 
 .tarjeta-autoridad ul {
@@ -713,7 +715,7 @@ main {}
 }
 
 .tarjeta-servicio {
-    background: var(--color-fondo-cards);
+    background: #4d7a9b;
     color: var(--color-texto-cards);
     padding: 2.5rem;
     border-radius: 1.5rem;
@@ -729,7 +731,7 @@ main {}
 }
 
 .tarjeta-servicio h3 {
-    color: var(--color-titulos);
+    color: #e4d295;
     margin-bottom: 1.2rem;
     font-size: 1.4rem;
 }
