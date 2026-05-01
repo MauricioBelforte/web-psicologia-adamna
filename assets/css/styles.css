@@ -1,4 +1,50 @@
 :root {
+    /* --- STITCH DESIGN SYSTEM UTILITIES --- */
+    --color-stitch-petrol: #405e60;
+    --color-stitch-cream: #f4efeb;
+    --color-stitch-orange: #efad60;
+}
+
+.arch-mask {
+    border-radius: 999px 999px 0 0;
+}
+
+.blob-mask {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+}
+
+.speech-bubble {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    filter: drop-shadow(0 10px 15px rgba(64, 94, 96, 0.1));
+    max-width: min(18rem, 100%);
+    width: fit-content;
+    white-space: normal;
+    text-align: center;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    border-width: 15px 15px 0 0;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.bg-grid-pattern {
+    background-image: radial-gradient(#405e60 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    opacity: 0.05;
+}
+
+:root {
     /* --- SISTEMA DE COLORES SEMÁNTICO (Reestructuración V2) --- */
 
     /* Botones (CTA y Navegación) */
@@ -29,8 +75,8 @@
     --color-borde-sutil: rgba(0, 0, 0, 0.1);
 
     /* Fuentes (de las instrucciones) */
-    --fuente-base: 'El Messiri', 'Georgia', sans-serif;
-    --fuente-secundaria: 'Libre Baskerville', serif;
+    --fuente-base: 'Montserrat', sans-serif;
+    --fuente-secundaria: 'Fredoka', sans-serif;
     --fuente-clasica: 'Lucida sans', 'Arial', sans-serif;
     /* Tamaños de Fuente (de las instrucciones) */
     --font-size-xxs: 0.875rem;
@@ -79,7 +125,6 @@ h1,
 h2,
 h3 {
     font-family: var(--fuente-base);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 /* --- Barra de Navegación (Extraída de la web de ejemplo) --- */
@@ -495,7 +540,7 @@ main {}
 .tarjeta-autoridad {
     background: #fbf4ea;
     color: var(--color-texto-general);
-    border: 1px solid ;
+    border: 1px solid;
     padding: 2.5rem;
     border-radius: 1.5rem;
     text-align: left;
@@ -513,7 +558,6 @@ main {}
     font-size: 1.5rem;
     border-bottom: 1px solid rgba(69, 130, 146, 0.3);
     padding-bottom: 0.8rem;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0);
 }
 
 .tarjeta-autoridad ul {

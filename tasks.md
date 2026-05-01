@@ -1,7 +1,17 @@
-# 📋 Task List — Web Psicología Adamna Mazú ✅ PROYECTO FINALIZADO
+# 📋 Task List — Web Psicología Adamna Mazú 🚧 FASE FINAL: AJUSTES TÉCNICOS
 
 > Implementación completa de los bloques definidos en `Requerimientos.md`.  
-> Proyecto finalizado respetando: variables CSS en `:root`, clases semánticas en español (`seccion-*`, `tarjeta-*`), JS modular y fuentes premium.
+> Objetivo: Integrar contenido académico y filosófico manteniendo la estética premium.
+
+---
+
+## FASE FINAL — Ajustes de Requerimientos 🚧
+
+- [ ] **F.1** Integrar H2 Destacado: "DIPLOMADA POR LA ASOCIACIÓN ARGENTINA DE SALUD MENTAL" ✅ (Pendiente de código)
+- [ ] **F.2** Re-integrar sección "¿Por qué elegir este espacio?" (4 Pilares con anclas).
+- [ ] **F.3** Crear bloque de Trayectoria Académica (Formación, Hospital SAMIC, Investigación).
+- [ ] **F.4** Detallar Enfoque de Trabajo (Silvia Bleichmar / Lev Vygotsky / Derechos Humanos).
+- [ ] **F.5** Expandir servicios a Psicología Jurídica y Forense.
 
 ---
 

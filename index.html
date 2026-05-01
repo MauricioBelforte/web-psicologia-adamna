@@ -1,351 +1,644 @@
-<!DOCTYPE html> <!-- MAQUETA V2 -->
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lic. Adamna Mazú | Psicóloga</title>
     <meta name="description"
-        content="Lic. Adamna Mazú - Psicóloga infanto-juvenil y de adultos. Atención presencial en Río Turbio y La Plata, y online en todo el país. Especialista en violencia escolar y conflictos familiares.">
-    <meta name="keywords"
-        content="psicóloga, Río Turbio, La Plata, salud mental, terapia online, Adamna Mazú, psicología infantil, bullying, violencia escolar">
-    <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href="assets/css/styles.css">
+        content="Lic. Adamna Mazú - Psicóloga infanto-juvenil y de adultos. Diplomada por la Asociación Argentina de Salud Mental. Especialista en violencia escolar y conflictos familiares.">
+
+    <!-- STITCH DESIGN SYSTEM & TAILWIND -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet">
+
+    <style>
+        :root {
+            /* CAMBIA ESTOS COLORES PARA PROBAR NUEVOS ESTILOS */
+            --primary-color: #284648;
+            --accent-color: #fc9b2d;
+            --surface-color: #d8e6e9;
+            --title-weight: 600;
+            /* CAMBIA ESTO: 300 (fina), 400 (normal), 500 (media), 600 (gruesa) */
+        }
+
+        .font-fredoka {
+            font-weight: var(--title-weight) !important;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': 'var(--primary-color)',
+                        'primary-container': '#405e60',
+                        'accent-orange': 'var(--accent-color)',
+                        'secondary': '#dce7ef',
+                        'nav-hover': '#4D7A9B',
+                        'surface': 'var(--surface-color)',
+                        'on-surface': '#131d1e',
+                        'on-surface-variant': '#414848',
+                        'secondary-container': '#e6e2de',
+                    },
+                    fontFamily: {
+                        'fredoka': ['Fredoka', 'sans-serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
-    <nav id="nav" class="menu-principal">
-        <a href="index.html" id="logo" class="logo">
-            <img src="assets/img/logo.png" alt="Logo de Espacio Psicológico Conexión">
-        </a>
-        <ul class="nav-links">
-            <li><a href="#hero" class="normal">Inicio</a></li>
-            <li><a href="#sobre-mi" class="normal">Sobre mí</a></li>
-            <li><a href="#servicios" class="normal">Servicios</a></li>
-            <li><a href="#recursos" class="normal">Recursos</a></li>
-            <li><a href="#testimonios" class="normal">Testimonios</a></li>
-        </ul>
-        <a href="#contacto" class="btn"><button>Turnos</button></a>
-        <a onclick="openNav()" class="menu-hamburguesa" href="#"><button><img
-                    src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg" width="40" height="40"
-                    alt="Menú"></button></a>
-        <div class="overlay" id="menu-movil">
-            <a onclick="closeNav()" class="close normal" href="#">&times;</a>
-            <div class="overlay-content">
-                <a onclick="closeNav()" class="normal" href="#hero">Inicio</a>
-                <a onclick="closeNav()" class="normal" href="#sobre-mi">Sobre mí</a>
-                <a onclick="closeNav()" class="normal" href="#servicios">Servicios</a>
-                <a onclick="closeNav()" class="normal" href="#recursos">Recursos</a>
-                <a onclick="closeNav()" class="normal" href="#testimonios">Testimonios</a>
-                <a onclick="closeNav()" class="normal" href="#contacto">Contacto</a>
+<body class="bg-white scroll-smooth">
+    <!-- HEADER -->
+    <header class="bg-[#f4efeb]/90 backdrop-blur-md sticky top-0 z-50 border-b border-primary/10 shadow-sm">
+        <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <img src="assets/img/logo.png" alt="Logo Lic. Adamna Mazú" class="w-12 h-12 object-contain">
+                <span class="font-fredoka text-2xl font-black text-primary">Lic. Adamna Mazú</span>
             </div>
+            <nav class="hidden md:flex items-center gap-8 font-fredoka font-bold tracking-tight text-lg">
+                <a class="text-primary hover:text-nav-hover transition-colors" href="#inicio">Inicio</a>
+                <a class="text-primary hover:text-nav-hover transition-colors" href="#sobre-mi">Sobre Mí</a>
+                <a class="text-primary hover:text-nav-hover transition-colors" href="#servicios">Servicios</a>
+                <a class="text-primary hover:text-nav-hover transition-colors" href="#recursos">Recursos</a>
+                <a class="text-primary hover:text-nav-hover transition-colors" href="#contacto">Contacto</a>
+            </nav>
+            <a href="#contacto"
+                class="bg-[#4D7A9B] text-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-[#4D7A9B] hover:shadow-lg transition-all active:scale-95 duration-150">
+                Turnos
+            </a>
+            <button onclick="document.getElementById('menu-movil').classList.toggle('hidden')"
+                class="md:hidden text-primary">
+                <span class="material-symbols-outlined text-4xl">menu</span>
+            </button>
         </div>
-    </nav>
+
+        <!-- MENÚ MÓVIL -->
+        <div id="menu-movil"
+            class="hidden md:hidden bg-primary p-6 space-y-4 font-fredoka text-center border-t border-white/10">
+            <a href="#hero" class="block text-white text-xl hover:text-nav-hover transition-colors"
+                onclick="document.getElementById('menu-movil').classList.add('hidden')">Inicio</a>
+            <a href="#sobre-mi" class="block text-white text-xl hover:text-nav-hover transition-colors"
+                onclick="document.getElementById('menu-movil').classList.add('hidden')">Sobre mí</a>
+            <a href="#servicios" class="block text-white text-xl hover:text-nav-hover transition-colors"
+                onclick="document.getElementById('menu-movil').classList.add('hidden')">Servicios</a>
+            <a href="#recursos" class="block text-white text-xl hover:text-nav-hover transition-colors"
+                onclick="document.getElementById('menu-movil').classList.add('hidden')">Recursos</a>
+            <a href="#contacto" class="block text-white text-xl hover:text-nav-hover transition-colors"
+                onclick="document.getElementById('menu-movil').classList.add('hidden')">Contacto</a>
+        </div>
+    </header>
 
     <main>
-        <section id="hero" class="seccion-hero">
-            <p class="hero-subtitulo-superior">Psicóloga infanto-juvenil y de adultos</p>
-            <h1 class="el-messiri">Lic. Adamna Mazú</h1>
-
-            <div class="hero-info">
-                <p class="hero-registro">M.P. 688 | M.N. 82481</p>
-                <p class="hero-experiencia">Más de 10 años de experiencia en intervenciones en contextos educativos y en
-                    problemáticas complejas.</p>
-            </div>
-
-            <a href="#contacto" class="cta-button">Solicitar turno</a>
-
-            <h2 class="hero-diploma">Diplomada por la Asociación Argentina de Salud Mental</h2>
-        </section>
-
-        <section id="validacion" class="seccion-validacion">
-            <div class="validacion-contenido">
-                <h2 class="libre-baskerville">Atención integral</h2>
-                <p class="validacion-texto">Atención a niños, adolescentes, adultos y familias</p>
-                <p class="validacion-ubicacion">Presencial en <strong>Río Turbio</strong> y <strong>La Plata</strong> |
-                    Online en todo el país</p>
-            </div>
-
-            <div class="galeria-profesional">
-                <div class="foto-marco"><img src="assets/img/adamna/adamna-1.jpeg"
-                        alt="Lic. Adamna Mazú - Retrato Profesional" loading="lazy"></div>
-                <div class="foto-marco"><img src="assets/img/adamna/adamna-2.jpeg"
-                        alt="Lic. Adamna Mazú - Contexto Laboral" loading="lazy"></div>
-                <div class="foto-marco"><img src="assets/img/adamna/adamna-3.jpeg" alt="Lic. Adamna Mazú - Sesión"
-                        loading="lazy"></div>
-                <div class="foto-marco"><img src="assets/img/adamna/adamna-4.jpeg" alt="Lic. Adamna Mazú - Consultorio"
-                        loading="lazy"></div>
-                <div class="foto-marco"><img src="assets/img/adamna/adamna-5.jpeg" alt="Lic. Adamna Mazú - Equipo"
-                        loading="lazy"></div>
-            </div>
-        </section>
-
-        <section id="sobre-mi" class="seccion-sobre-mi">
-            <div class="sobre-mi-contenedor">
-                <div class="sobre-mi-imagen">
-                    <img src="assets/img/sobre_nosotros.jpeg" alt="Lic. Adamna Mazú" />
-                </div>
-                <div class="sobre-mi-texto">
-                    <h2 class="el-messiri">Sobre mí</h2>
-                    <p>Soy Licenciada en Psicología por la Universidad Nacional de La Plata, con formación y trayectoria
-                        en el campo clínico, educativo y comunitario.</p>
-                    <p>Mi trabajo se construye desde una mirada integral de la salud mental, entendiendo que cada
-                        persona, familia o institución necesita ser abordada en su contexto, su historia y sus vínculos.
+        <!-- BLOQUE 1 — PRESENTACIÓN -->
+        <section id="hero" class="relative min-h-[85vh] flex items-center overflow-hidden py-20 bg-surface">
+            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+            <div
+                class="container mx-auto px-8 md:px-12 grid md:grid-cols-2 gap-12 items-center relative z-10 max-w-7xl">
+                <div>
+                    <div
+                        class="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full mb-6 font-bold text-xs md:text-sm tracking-wide">
+                        Psicóloga infanto-juvenil y de adultos | M.P. 688 | M.N. 82481
+                    </div>
+                    <h1 class="font-fredoka text-4xl md:text-6xl text-primary mb-2 leading-tight">
+                        Lic. Adamna Mazú
+                    </h1>
+                    <h2
+                        class="font-fredoka text-xl md:text-2xl text-primary/60 font-bold mb-8 uppercase tracking-wider">
+                        DIPLOMADA POR LA ASOCIACIÓN ARGENTINA DE SALUD MENTAL
+                    </h2>
+                    <p class="font-montserrat text-base md:text-lg text-on-surface-variant mb-6 max-w-lg">
+                        Más de 10 años de experiencia en intervenciones en contextos educativos y problemáticas
+                        complejas. Un enfoque cálido para acompañar tu bienestar.
                     </p>
 
-                    <h3>Especializaciones:</h3>
-                    <ul class="lista-especialidades">
-                        <li>Violencia escolar</li>
-                        <li>Conflictos familiares</li>
-                        <li>Desarrollo infantil</li>
-                        <li>Convivencia en instituciones educativas</li>
-                    </ul>
+                    <!-- BLOQUE 2 — VALIDACIÓN RÁPIDA -->
+                    <div class="bg-white/80 p-6 rounded-3xl border border-primary/10 mb-8 max-w-md">
+                        <ul class="space-y-3 font-montserrat text-sm font-bold text-primary">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-accent-orange">check_circle</span>
+                                Atención a niños, adolescentes, adultos y familias
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-accent-orange">location_on</span>
+                                Presencial en Río Turbio y La Plata | Online en todo el país
+                            </li>
+                        </ul>
+                    </div>
 
-
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contacto"
+                            class="bg-[#4D7A9B] text-white px-10 py-5 rounded-full font-bold hover:bg-white hover:text-[#4D7A9B] hover:shadow-xl transition-all flex items-center gap-2">
+                            SOLICITAR TURNO
+                            <span class="material-symbols-outlined">arrow_downward</span>
+                        </a>
+                    </div>
                 </div>
 
+                <div class="relative">
+                    <div
+                        class="speech-bubble absolute -top-4 -right-4 md:-right-12 lg:-right-4 px-6 py-4 z-20 animate-bounce">
+                        <p class="font-fredoka text-primary font-bold">BIENVENIDOS A MI ESPACIO</p>
+                    </div>
+                    <div
+                        class="blob-mask w-full aspect-square bg-secondary-container p-4 overflow-hidden relative shadow-2xl">
+                        <img src="assets/img/adamna/adamna-1.jpeg" alt="Lic. Adamna Mazú"
+                            class="w-full h-full object-cover blob-mask">
+                    </div>
+                </div>
             </div>
-            <div class="sobre-mi-cierre">
-                <p>He formado parte de equipos hospitalarios, proyectos de investigación y espacios de intervención
-                    en escuelas y comunidades. Actualmente continúo mi formación como candidata a Magíster en
-                    Psicología Educacional, profundizando el trabajo en infancia, familia y contextos educativos.
+        </section>
+
+        <!-- ¿POR QUÉ ELEGIR ESTE ESPACIO? -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-8 md:px-12 max-w-7xl">
+                <div class="text-center mb-16">
+                    <h2
+                        class="inline-block bg-[#4c6b73] text-white font-fredoka text-3xl md:text-4xl px-10 py-4 rounded-xl uppercase tracking-wider shadow-lg">
+                        ¿Por qué elegir este espacio?
+                    </h2>
+                </div>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div
+                        class="text-center p-8 bg-surface rounded-[2rem] border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-4xl text-accent-orange mb-4">verified</span>
+                        <h3 class="font-fredoka text-xl text-primary mb-2 font-bold uppercase">Profesionalismo y calidez
+                        </h3>
+                    </div>
+                    <div
+                        class="text-center p-8 bg-surface rounded-[2rem] border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-4xl text-accent-orange mb-4">favorite</span>
+                        <h3 class="font-fredoka text-xl text-primary mb-2 font-bold uppercase">Empatía real</h3>
+                    </div>
+                    <div
+                        class="text-center p-8 bg-surface rounded-[2rem] border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-4xl text-accent-orange mb-4">lock</span>
+                        <h3 class="font-fredoka text-xl text-primary mb-2 font-bold uppercase">Confidencialidad absoluta
+                        </h3>
+                    </div>
+                    <div
+                        class="text-center p-8 bg-surface rounded-[2rem] border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-4xl text-accent-orange mb-4">history_edu</span>
+                        <h3 class="font-fredoka text-xl text-primary mb-2 font-bold uppercase">Amplia experiencia</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OTRO BLOQUE — EXPERIENCIA DE PACIENTES -->
+        <section id="testimonios" class="py-20 bg-[#f4efeb]">
+            <div class="container mx-auto px-8 md:px-12 max-w-7xl">
+                <div class="text-center mb-16">
+                    <h2
+                        class="inline-block bg-[#4c6b73] text-white font-fredoka text-3xl md:text-4xl px-10 py-4 rounded-xl uppercase tracking-wider shadow-lg mb-6">
+                        Experiencia de pacientes
+                    </h2>
+                    <p class="font-montserrat text-primary/60 font-bold flex items-center justify-center gap-2">
+                        <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png"
+                            class="w-5" alt="Google">
+                        Opiniones reales en Google Maps
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-3xl shadow-lg border border-primary/5 h-full flex flex-col">
+                        <div class="flex text-accent-orange mb-4">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                        </div>
+                        <p class="font-montserrat text-on-surface-variant italic mb-6 flex-grow">"Excelente
+                            profesionalismo y calidez. Me sentí muy cómoda desde la primera sesión."</p>
+                        <div class="font-bold text-primary">Mariana R.</div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-lg border border-primary/5 h-full flex flex-col">
+                        <div class="flex text-accent-orange mb-4">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                        </div>
+                        <p class="font-montserrat text-on-surface-variant italic mb-6 flex-grow">"Un espacio de mucha
+                            ayuda real. Muy recomendable para momentos de crisis."</p>
+                        <div class="font-bold text-primary">Carlos S.</div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-lg border border-primary/5 h-full flex flex-col">
+                        <div class="flex text-accent-orange mb-4">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">star</span>
+                        </div>
+                        <p class="font-montserrat text-on-surface-variant italic mb-6 flex-grow">"Logró conectar muy
+                            rápido con mi hijo a través del juego y el dibujo."</p>
+                        <div class="font-bold text-primary">José López</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOQUE 3 — SOBRE MÍ -->
+        <section id="sobre-mi" class="py-24 bg-white">
+            <div class="container mx-auto px-8 md:px-12 max-w-7xl">
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+                    <div class="space-y-8">
+                        <div class="bg-secondary-container aspect-square overflow-hidden shadow-2xl rounded-[15px]">
+                            <img src="assets/img/sobre_nosotros.jpeg" alt="Lic. Adamna Mazú"
+                                class="w-full h-full object-cover border-[15px] border-solid border-[#487078] rounded-[15px]">
+                        </div>
+                        <div class=" p-8 rounded-3xl  border-primary/5">
+                            <h3 class="font-fredoka text-xl text-primary mb-4 font-bold uppercase">Trabajo desde una
+                                combinación de:</h3>
+                            <ul class="space-y-2 text-primary font-bold italic">
+                                <li>• Rigurosidad profesional</li>
+                                <li>• Escucha cercana</li>
+                                <li>• Intervenciones respetuosas</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2
+                            class="inline-block bg-[#4c6b73] text-white font-fredoka text-3xl md:text-4xl px-10 py-4 rounded-xl uppercase tracking-wider shadow-lg mb-8">
+                            Sobre Mí
+                        </h2>
+                        <div class="space-y-6 font-montserrat text-lg text-on-surface-variant leading-relaxed">
+                            <p>Soy Licenciada en Psicología por la Universidad Nacional de La Plata, con formación y
+                                trayectoria en el campo clínico, educativo y comunitario.</p>
+                            <p>Mi trabajo se construye desde una mirada integral de la salud mental, entendiendo que
+                                cada persona, familia o institución necesita ser abordada en su contexto, su historia y
+                                sus vínculos.</p>
+
+                            <div class="bg-surface p-8 rounded-3xl border border-primary/5">
+                                <h3 class="font-fredoka text-xl text-primary mb-4 font-bold uppercase">A lo largo de mi
+                                    recorrido profesional me especialicé en:</h3>
+                                <ul class="grid md:grid-cols-2 gap-3 text-base">
+                                    <li>• Violencia escolar</li>
+                                    <li>• Conflictos familiares</li>
+                                    <li>• Desarrollo infantil</li>
+                                    <li>• Convivencia en instituciones educativas</li>
+                                </ul>
+                            </div>
+
+                            <p>He formado parte de equipos hospitalarios, proyectos de investigación y espacios de
+                                intervención en escuelas y comunidades. Actualmente continúo mi formación como candidata
+                                a Magíster en Psicología Educacional, profundizando el trabajo en infancia, familia y
+                                contextos educativos.</p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOQUE 4 — AUTORIDAD PROFESIONAL -->
+        <section class="py-24 bg-surface">
+            <div class="container mx-auto px-8 md:px-12 max-w-7xl">
+                <div class="text-center mb-16">
+                    <h2
+                        class="inline-block bg-[#4c6b73] text-white font-fredoka text-3xl md:text-4xl px-10 py-4 rounded-xl uppercase tracking-wider shadow-lg">
+                        Autoridad Profesional
+                    </h2>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-12">
+                    <!-- Formación -->
+                    <div class="bg-white p-10 rounded-[3rem] shadow-xl border border-primary/5">
+                        <div
+                            class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 text-primary">
+                            <span class="material-symbols-outlined text-4xl">school</span>
+                        </div>
+                        <h3
+                            class="font-fredoka text-2xl text-primary mb-6 font-bold uppercase border-b border-primary/10 pb-4 tracking-wide">
+                            Formación</h3>
+                        <ul class="space-y-5 font-montserrat text-on-surface-variant">
+                            <li><strong>• Licenciada en Psicología</strong> — Universidad Nacional de La Plata</li>
+                            <li><strong>• Profesora de Psicología</strong> — UNLP</li>
+                            <li><strong>• Diplomada en Psicología Infantil</strong> — Asociación Argentina de Salud
+                                Mental</li>
+                            <li><strong>• Candidata a Magíster</strong> en Psicología Educacional</li>
+                        </ul>
+                    </div>
+                    <!-- Experiencia -->
+                    <div class="bg-white p-10 rounded-[3rem] shadow-xl border border-primary/5">
+                        <div
+                            class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 text-primary">
+                            <span class="material-symbols-outlined text-4xl">work_history</span>
+                        </div>
+                        <h3
+                            class="font-fredoka text-2xl text-primary mb-6 font-bold uppercase border-b border-primary/10 pb-4 tracking-wide">
+                            Experiencia</h3>
+                        <ul class="space-y-5 font-montserrat text-on-surface-variant leading-relaxed">
+                            <li>• Atención clínica a niños, adolescentes y adultos</li>
+                            <li>• Trabajo con familias</li>
+                            <li>• Psicodiagnóstico y evaluaciones psicológicas</li>
+                            <li>• Psicóloga en Hospital SAMIC El Calafate</li>
+                        </ul>
+                    </div>
+                    <!-- Investigación -->
+                    <div class="bg-white p-10 rounded-[3rem] shadow-xl border border-primary/5">
+                        <div
+                            class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 text-primary">
+                            <span class="material-symbols-outlined text-4xl">science</span>
+                        </div>
+                        <h3
+                            class="font-fredoka text-2xl text-primary mb-6 font-bold uppercase border-b border-primary/10 pb-4 tracking-wide">
+                            Investigación</h3>
+                        <ul class="space-y-5 font-montserrat text-on-surface-variant leading-relaxed">
+                            <li>• Participación en proyectos de investigación en UNLP</li>
+                            <li>• Trabajo en extensión universitaria en escuelas</li>
+                            <li>• Participación en congresos nacionales e internacionales</li>
+                            <li>• Coautora de libro sobre convivencia y violencia en contextos educativos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOQUE 5 — SERVICIOS -->
+        <section id="servicios" class="py-24 bg-white">
+            <div class="container mx-auto px-8 md:px-12 max-w-7xl">
+                <div class="text-center mb-16">
+                    <h2
+                        class="inline-block bg-[#4c6b73] text-white font-fredoka text-3xl md:text-4xl px-10 py-4 rounded-xl uppercase tracking-wider shadow-lg">
+                        Servicios
+                    </h2>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Atención Clínica -->
+                    <div class="bg-primary text-white p-12 rounded-[4rem] shadow-2xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full -mr-24 -mt-24"></div>
+                        <h3
+                            class="inline-block bg-white text-[#667f83] font-fredoka text-3xl mb-8 font-bold uppercase tracking-wide px-5 py-3 rounded-xl">
+                            Atención clínica</h3>
+                        <p
+                            class="inline-block bg-[#667f83] text-white font-montserrat text-sm font-bold px-6 py-2 rounded-lg mb-8 uppercase tracking-widest italic shadow-sm">
+                            Acompañamiento psicológico para:</p>
+                        <ul
+                            class="grid grid-cols-2 gap-6 font-montserrat text-xl mb-12 italic border-b border-white/10 pb-10">
+                            <li>• Niños</li>
+                            <li>• Adolescentes</li>
+                            <li>• Adultos</li>
+                            <li>• Familias</li>
+                        </ul>
+                        <h4 class="font-fredoka text-xl mb-6 font-bold uppercase">Problemáticas que abordo:</h4>
+                        <ul class="grid md:grid-cols-2 gap-y-3 gap-x-8 font-montserrat text-white/80">
+                            <li>• Conducta infantil</li>
+                            <li>• Bullying</li>
+                            <li>• Violencia escolar</li>
+                            <li>• Conflictos familiares</li>
+                            <li>• Desarrollo infantil</li>
+                            <li>• Dificultades emocionales</li>
+                        </ul>
+                    </div>
+                    <!-- Otros Servicios -->
+                    <div class="space-y-8">
+                        <div class="bg-secondary-container p-10 rounded-[4rem] text-primary shadow-xl">
+                            <h3
+                                class="inline-block bg-white text-[#667f83] font-fredoka text-2xl mb-6 font-bold uppercase tracking-wide px-5 py-3 rounded-xl">
+                                Evaluaciones</h3>
+                            <ul class="space-y-5 font-montserrat text-lg font-medium">
+                                <li class="flex items-center gap-4 text-primary/80"><span
+                                        class="material-symbols-outlined text-accent-orange text-3xl">task_alt</span>
+                                    Psicodiagnóstico</li>
+                                <li class="flex items-center gap-4 text-primary/80"><span
+                                        class="material-symbols-outlined text-accent-orange text-3xl">task_alt</span>
+                                    Informes psicológicos</li>
+                                <li class="flex items-center gap-4 text-primary/80"><span
+                                        class="material-symbols-outlined text-accent-orange text-3xl">task_alt</span>
+                                    Psicofísicos laborales</li>
+                                <li class="flex items-center gap-4 text-primary/80"><span
+                                        class="material-symbols-outlined text-accent-orange text-3xl">task_alt</span>
+                                    Evaluaciones para instituciones</li>
+                            </ul>
+                        </div>
+                        <div class="bg-secondary p-10 rounded-[4rem] text-primary shadow-xl">
+                            <h3
+                                class="inline-block bg-white text-[#667f83] font-fredoka text-2xl mb-4 font-bold uppercase tracking-wide px-5 py-3 rounded-xl">
+                                Psicología jurídica
+                                y forense</h3>
+                            <p class="font-montserrat text-lg leading-relaxed italic">Atención técnica y especializada
+                                en contextos judiciales y forenses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOQUE 6 — ENFOQUE DE TRABAJO -->
+        <section id="enfoque" class="py-24 bg-[#f4efeb]">
+            <div class="container mx-auto px-8 md:px-12 max-w-5xl">
+                <div class="text-center mb-16">
+                    <h2
+                        class="inline-block bg-[#4c6b73] text-white font-fredoka text-3xl md:text-4xl px-10 py-4 rounded-xl uppercase tracking-wider shadow-lg">
+                        Enfoque de Trabajo
+                    </h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 mb-16">
+                    <div class="space-y-8">
+                        <div class="flex gap-6 items-start">
+                            <div
+                                class="w-14 h-14 bg-primary text-white rounded-3xl flex items-center justify-center shrink-0 shadow-lg">
+                                <span class="material-symbols-outlined text-3xl">psychology</span>
+                            </div>
+                            <div>
+                                <h3 class="font-fredoka text-xl text-primary mb-2 font-bold uppercase">Enfoque integral
+                                </h3>
+                                <p class="font-montserrat text-on-surface-variant">No solo abordamos el síntoma, sino la
+                                    totalidad del sujeto en su contexto.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div
+                                class="w-14 h-14 bg-primary text-white rounded-3xl flex items-center justify-center shrink-0 shadow-lg">
+                                <span class="material-symbols-outlined text-3xl">groups</span>
+                            </div>
+                            <div>
+                                <h3 class="font-fredoka text-xl text-primary mb-2 font-bold uppercase">Perspectiva
+                                    psicoanalítica</h3>
+                                <p class="font-montserrat text-on-surface-variant">Aportes de <strong>Silvia
+                                        Bleichmar</strong> sobre la subjetividad.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="flex gap-6 items-start">
+                            <div
+                                class="w-14 h-14 bg-primary text-white rounded-3xl flex items-center justify-center shrink-0 shadow-lg">
+                                <span class="material-symbols-outlined text-3xl">balance</span>
+                            </div>
+                            <div>
+                                <h3 class="font-fredoka text-xl text-primary mb-2 font-bold uppercase">Enfoque de
+                                    derechos humanos</h3>
+                                <p class="font-montserrat text-on-surface-variant">Intervenciones centradas en la
+                                    protección y respeto integral.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div
+                                class="w-14 h-14 bg-primary text-white rounded-3xl flex items-center justify-center shrink-0 shadow-lg">
+                                <span class="material-symbols-outlined text-3xl">history_edu</span>
+                            </div>
+                            <div>
+                                <h3 class="font-fredoka text-xl text-primary mb-2 font-bold uppercase">Perspectiva
+                                    socio-histórica</h3>
+                                <p class="font-montserrat text-on-surface-variant">Marco teórico: <strong>Lev
+                                        Vygotsky</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-12 rounded-[4rem] border-l-[1rem] border-[#4D7A9B] shadow-2xl">
+                    <p class="font-montserrat font-bold text-[#4D7A9B] text-xs uppercase tracking-widest mb-4">
+                        Encuadre profesional (Importante):</p>
+                    <p class="font-montserrat text-xl text-primary leading-relaxed italic">
+                        "La articulación con instituciones se realiza desde un posicionamiento clínico, resguardando la
+                        singularidad de cada caso y evitando la reducción del trabajo a la mera emisión de informes."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOQUE 7 — RECURSOS PROFESIONALES -->
+        <section id="recursos" class="py-24 bg-white">
+            <div class="container mx-auto px-8 md:px-12 max-w-7xl">
+                <div class="text-center mb-16">
+                    <h2
+                        class="inline-block bg-[#4c6b73] text-white font-fredoka text-3xl md:text-4xl px-10 py-4 rounded-xl uppercase tracking-wider shadow-lg">
+                        Recursos Profesionales
+                    </h2>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="#"
+                        class="group bg-surface p-10 rounded-[3rem] text-center border border-primary/5 hover:bg-primary transition-all duration-300">
+                        <span
+                            class="material-symbols-outlined text-5xl text-primary mb-4 block group-hover:text-white group-hover:rotate-6 transition-all">description</span>
+                        <p
+                            class="font-fredoka text-xl font-bold text-primary group-hover:text-white uppercase tracking-tight">
+                            Guía sobre bullying</p>
+                    </a>
+                    <a href="#"
+                        class="group bg-surface p-10 rounded-[3rem] text-center border border-primary/5 hover:bg-primary transition-all duration-300">
+                        <span
+                            class="material-symbols-outlined text-5xl text-primary mb-4 block group-hover:text-white group-hover:rotate-6 transition-all">menu_book</span>
+                        <p
+                            class="font-fredoka text-xl font-bold text-primary group-hover:text-white uppercase tracking-tight">
+                            Material docente</p>
+                    </a>
+                    <a href="#"
+                        class="group bg-surface p-10 rounded-[3rem] text-center border border-primary/5 hover:bg-primary transition-all duration-300">
+                        <span
+                            class="material-symbols-outlined text-5xl text-primary mb-4 block group-hover:text-white group-hover:rotate-6 transition-all">library_books</span>
+                        <p
+                            class="font-fredoka text-xl font-bold text-primary group-hover:text-white uppercase tracking-tight">
+                            Bibliografía de cursos</p>
+                    </a>
+                    <a href="#"
+                        class="group bg-surface p-10 rounded-[3rem] text-center border border-primary/5 hover:bg-primary transition-all duration-300">
+                        <span
+                            class="material-symbols-outlined text-5xl text-primary mb-4 block group-hover:text-white group-hover:rotate-6 transition-all">edit_note</span>
+                        <p
+                            class="font-fredoka text-xl font-bold text-primary group-hover:text-white uppercase tracking-tight">
+                            Material para psicotécnicos</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOQUE 8 — INTERVENCIONES -->
+        <section id="intervenciones" class="py-24 bg-surface">
+            <div class="container mx-auto px-8 md:px-12 max-w-7xl">
+                <div class="text-center mb-8">
+                    <h2
+                        class="inline-block bg-[#4c6b73] text-white font-fredoka text-3xl md:text-4xl px-10 py-4 rounded-xl uppercase tracking-wider shadow-lg">
+                        Intervenciones
+                    </h2>
+                </div>
+                <p
+                    class="font-montserrat text-xl text-on-surface-variant text-center max-w-3xl mx-auto mb-20 leading-relaxed">
+                    Espacios de trabajo en instituciones educativas y comunitarias, orientados a la prevención, la
+                    intervención y la construcción de convivencia.
                 </p>
-
-                <p class="destacado-sobre-mi">Trabajo desde una combinación de <strong>rigurosidad
-                        profesional</strong>, <strong>escucha cercana</strong> e <strong>intervenciones
-                        respetuosas</strong>.</p>
-            </div>
-        </section>
-
-        <section id="autoridad" class="seccion-autoridad">
-            <h2 class="el-messiri">Autoridad Profesional</h2>
-            <div class="contenedor-tarjetas">
-                <article class="tarjeta-autoridad">
-                    <h3 class="libre-baskerville">Formación</h3>
-                    <ul>
-                        <li>Licenciada en Psicología — Universidad Nacional de La Plata</li>
-                        <li>Profesora de Psicología — UNLP</li>
-                        <li>Diplomada en Psicología Infantil — Asociación Argentina de Salud Mental</li>
-                        <li>Candidata a Magíster en Psicología Educacional</li>
-                    </ul>
-                </article>
-                <article class="tarjeta-autoridad">
-                    <h3 class="libre-baskerville">Experiencia</h3>
-                    <ul>
-                        <li>Atención clínica a niños, adolescentes y adultos</li>
-                        <li>Trabajo con familias</li>
-                        <li>Psicodiagnóstico y evaluaciones psicológicas</li>
-                        <li>Psicóloga en Hospital SAMIC El Calafate</li>
-                    </ul>
-                </article>
-                <article class="tarjeta-autoridad">
-                    <h3 class="libre-baskerville">Investigación académica</h3>
-                    <ul>
-                        <li>Participación en proyectos de investigación en UNLP</li>
-                        <li>Trabajo en extensión universitaria en escuelas</li>
-                        <li>Participación en congresos nacionales e internacionales</li>
-                        <li>Coautora de libro sobre convivencia y violencia en contextos educativos</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <section id="servicios" class="seccion-servicios">
-            <h2 class="el-messiri">Servicios</h2>
-            <div class="contenedor-tarjetas">
-                <article class="tarjeta-servicio">
-                    <h3 class="libre-baskerville">Atención clínica</h3>
-                    <p>Acompañamiento psicológico para:</p>
-                    <ul>
-                        <li>Niños</li>
-                        <li>Adolescentes</li>
-                        <li>Adultos</li>
-                        <li>Familias</li>
-                    </ul>
-                </article>
-                <article class="tarjeta-servicio">
-                    <h3 class="libre-baskerville">Problemáticas que abordo</h3>
-                    <ul>
-                        <li>Conducta infantil</li>
-                        <li>Bullying y Violencia escolar</li>
-                        <li>Conflictos familiares</li>
-                        <li>Desarrollo infantil</li>
-                        <li>Dificultades emocionales</li>
-                    </ul>
-                </article>
-                <article class="tarjeta-servicio">
-                    <h3 class="libre-baskerville">Evaluaciones</h3>
-                    <ul>
-                        <li>Psicodiagnóstico</li>
-                        <li>Informes psicológicos</li>
-                        <li>Psicofísicos laborales</li>
-                        <li>Evaluaciones para instituciones</li>
-                    </ul>
-                </article>
-                <article class="tarjeta-servicio">
-                    <h3 class="libre-baskerville">Psicología jurídica y forense</h3>
-                    <p>Intervenciones y evaluaciones en contextos legales, con responsabilidad profesional y rigurosidad
-                        técnica.</p>
-                </article>
-                <article class="tarjeta-servicio">
-                    <h3 class="libre-baskerville">Trabajo institucional</h3>
-                    <ul>
-                        <li>Talleres y Capacitaciones</li>
-                        <li>Charlas preventivas</li>
-                        <li>Intervenciones en escuelas</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <section id="enfoque" class="seccion-enfoque">
-            <div class="enfoque-contenedor">
-                <h2 class="el-messiri">Enfoque de Trabajo</h2>
-                <ul class="lista-enfoque">
-                    <li><strong>Enfoque integral:</strong> no solo el síntoma, sino el contexto.</li>
-                    <li><strong>Perspectiva psicoanalítica</strong> (aportes de Silvia Bleichmar).</li>
-                    <li><strong>Enfoque de derechos humanos.</strong></li>
-                    <li><strong>Perspectiva socio-histórica</strong> (Lev Vygotsky).</li>
-                    <li><strong>Trabajo articulado</strong> con instituciones educativas.</li>
-                </ul>
-
-                <div class="encuadre-profesional">
-                    <h3 class="libre-baskerville">Encuadre profesional</h3>
-                    <p>La articulación con instituciones se realiza desde un posicionamiento clínico, resguardando la
-                        singularidad de cada caso y evitando la reducción del trabajo a la mera emisión de informes.</p>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="arch-mask aspect-[3/4] overflow-hidden shadow-2xl relative group">
+                        <img src="assets/img/adamna/adamna-2.jpeg" alt="Intervención"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div
+                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <div class="arch-mask aspect-[3/4] overflow-hidden shadow-2xl relative group md:translate-y-16">
+                        <img src="assets/img/adamna/adamna-4.jpeg" alt="Intervención"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div
+                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <div class="arch-mask aspect-[3/4] overflow-hidden shadow-2xl relative group">
+                        <img src="assets/img/adamna/adamna-5.jpeg" alt="Intervención"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div
+                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="recursos" class="seccion-recursos">
-            <h2 class="el-messiri">Recursos Profesionales</h2>
-            <p class="recursos-intro">Materiales orientados a familias, docentes e instituciones para el acompañamiento
-                de distintas problemáticas.</p>
-            <div class="recursos-grid">
-                <a href="#" target="_blank" class="boton-recurso">
-                    <span class="icono-recurso">📄</span>
-                    <span class="texto-recurso">Guía sobre bullying</span>
-                </a>
-                <a href="#" target="_blank" class="boton-recurso">
-                    <span class="icono-recurso">📚</span>
-                    <span class="texto-recurso">Material docente</span>
-                </a>
-                <a href="#" target="_blank" class="boton-recurso">
-                    <span class="icono-recurso">📖</span>
-                    <span class="texto-recurso">Bibliografía de cursos</span>
-                </a>
-                <a href="#" target="_blank" class="boton-recurso">
-                    <span class="icono-recurso">📝</span>
-                    <span class="texto-recurso">Material para psicotécnicos</span>
-                </a>
-            </div>
-        </section>
-
-        <section id="intervenciones" class="seccion-intervenciones">
-            <h2 class="el-messiri">Intervenciones</h2>
-            <p class="intervenciones-intro">Espacios de trabajo en instituciones educativas y comunitarias, orientados a
-                la prevención, la intervención y la construcción de convivencia.</p>
-
-            <div class="galeria-intervenciones">
-                <div class="intervencion-foto"><img src="assets/img/WhatsApp Image 2026-04-18 at 2.48.05 PM.jpeg"
-                        alt="Taller institucional" loading="lazy"></div>
-                <div class="intervencion-foto"><img src="assets/img/WhatsApp Image 2026-04-18 at 2.48.05 PM (1).jpeg"
-                        alt="Charla comunitaria" loading="lazy"></div>
-                <div class="intervencion-foto"><img src="assets/img/sobre_nosotros.jpeg" alt="Actividad en escuela"
-                        loading="lazy"></div>
-            </div>
-        </section>
-
-        <section id="beneficios" class="seccion-beneficios">
-            <h2 class="el-messiri">¿Por qué elegir este espacio?</h2>
-            <div class="contenedor-tarjetas">
-                <article class="tarjeta-beneficio">
-                    <h3 class="libre-baskerville">Profesionalismo y calidez</h3>
-                    <a href="#sobre-mi" class="enlace-beneficio">Conocé más sobre mí <span>→</span></a>
-                </article>
-                <article class="tarjeta-beneficio">
-                    <h3 class="libre-baskerville">Empatía real</h3>
-                    <a href="#intervenciones" class="enlace-beneficio">Ver intervenciones <span>→</span></a>
-                </article>
-                <article class="tarjeta-beneficio">
-                    <h3 class="libre-baskerville">Confidencialidad absoluta</h3>
-                    <a href="#enfoque" class="enlace-beneficio">Nuestro enfoque <span>→</span></a>
-                </article>
-                <article class="tarjeta-beneficio">
-                    <h3 class="libre-baskerville">Amplia experiencia</h3>
-                    <a href="#autoridad" class="enlace-beneficio">Autoridad profesional <span>→</span></a>
-                </article>
-            </div>
-        </section>
-
-        <section id="testimonios" class="seccion-productos">
-            <h2 class="el-messiri">Experiencia de pacientes</h2>
-            <div class="google-badge">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Settings_icon.svg" alt="Google"
-                    width="20">
-                <span>Opiniones reales en Google Maps</span>
-            </div>
-            <div class="contenedor-tarjetas">
-                <article class="tarjeta-testimonio">
-                    <img src="assets/img/testimonio_sintetico_0.jpg" alt="Foto de Mariana R.">
-                    <span class="comillas-testimonio">“</span>
-                    <p class="texto-testimonio">"Excelente profesionalismo y calidez. Me sentí muy cómoda desde la
-                        primera sesión...."</p>
-                    <div class="estrellas-testimonio">⭐⭐⭐⭐⭐</div>
-                    <h3 class="autor-testimonio">Mariana R.</h3>
-                </article>
-
-                <article class="tarjeta-testimonio">
-                    <img src="assets/img/testimonio_sintetico_1.jpg" alt="Foto de Carlos S.">
-                    <span class="comillas-testimonio">“</span>
-                    <p class="texto-testimonio">"Un espacio de mucha contención y ayuda real. Muy recomendable para
-                        cualquiera que lo necesite...."</p>
-                    <div class="estrellas-testimonio">⭐⭐⭐⭐⭐</div>
-                    <h3 class="autor-testimonio">Carlos S.</h3>
-                </article>
-
-                <article class="tarjeta-testimonio">
-                    <img src="assets/img/testimonio_sintetico_2.jpg" alt="Foto de José López">
-                    <span class="comillas-testimonio">“</span>
-                    <p class="texto-testimonio">"La calidad es increíble y el trato muy amable. 100% recomendado...."
-                    </p>
-                    <div class="estrellas-testimonio">⭐⭐⭐⭐⭐</div>
-                    <h3 class="autor-testimonio">José López</h3>
-                </article>
-            </div>
-        </section>
-
-
-        <section id="ubicacion" class="seccion-ubicacion">
-            <h2 class="el-messiri">Dónde Estamos</h2>
-            <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem;">San Martín 678, Rio Turbio, Santa Cruz</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=San%20Mart%C3%ADn%20678%2C%20Trelew%2C%20Chubut"
-                target="_blank" class="cta-button" style="margin-top: 1.5rem;">VER EN MAPA</a>
-        </section>
-
-        <section id="cierre" class="seccion-cierre">
-            <div class="cierre-contenedor">
-                <p class="cierre-emocional">Pedir ayuda no siempre es fácil.<br>Pero puede ser el primer paso para que
-                    algo empiece a cambiar.</p>
-                <p class="cierre-invitacion">Si estás atravesando una situación que te preocupa, puedo acompañarte.</p>
-
-                <div class="cierre-acciones">
-                    <a href="https://wa.me/2966486745" class="cta-button">Solicitar turno</a>
-                    <div class="social-icons">
+        <!-- BLOQUE 9 — CIERRE + REDES -->
+        <section class="py-24 bg-white">
+            <div
+                class="container mx-auto px-8 md:px-12 max-w-5xl bg-primary-container rounded-[5rem] p-20 text-center text-white relative overflow-hidden shadow-2xl">
+                <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+                <h2 class="font-fredoka text-4xl md:text-5xl mb-8 uppercase tracking-tight leading-tight relative z-10">
+                    Pedir ayuda no siempre es fácil, pero es el primer paso para estar mejor.
+                </h2>
+                <p class="font-montserrat text-xl opacity-90 mb-12 relative z-10">
+                    Si estás atravesando una situación que te preocupa, puedo acompañarte en tu proceso.
+                </p>
+                <div class="flex flex-wrap justify-center gap-6 relative z-10">
+                    <a href="https://wa.me/2966486745" target="_blank"
+                        class="bg-[#4D7A9B] text-white px-14 py-6 rounded-full font-bold text-2xl hover:bg-white hover:text-[#4D7A9B] hover:shadow-2xl transition-all active:scale-95 flex items-center gap-3">
+                        SOLICITAR TURNO
+                    </a>
+                    <div class="flex gap-4">
                         <a href="https://www.instagram.com/ada.psicologa/" target="_blank"
-                            class="social-icon instagram active-link" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-instagram" viewBox="0 0 16 16">
+                            class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white transition-all group">
+                            <svg class="w-8 h-8 fill-current text-white group-hover:text-[#4D7A9B]" viewBox="0 0 24 24">
                                 <path
-                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.848 0-3.204.012-3.584.07-4.849.149-3.225-1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                             </svg>
                         </a>
-                        <a href="#" target="_blank" class="social-icon tiktok active-link" aria-label="TikTok">
-                            <svg fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <title>TikTok</title>
+                        <a href="#" target="_blank"
+                            class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white transition-all group">
+                            <svg class="w-8 h-8 fill-current text-white group-hover:text-[#4D7A9B]" viewBox="0 0 24 24">
                                 <path
                                     d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.06-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.03-1.03-2.28-1.39-3.41-4.06-3.07-6.68.28-2.48 2.02-4.66 4.39-5.41.87-.28 1.76-.41 2.67-.36.01 1.29.01 2.58.01 3.87-.02-.01-.05-.01-.08-.01-.54-.09-1.1-.01-1.59.24-.7.32-1.18 1.01-1.25 1.75-.17 1.01.31 2.06 1.14 2.63.81.55 1.85.56 2.65.02.58-.4 1-1.04 1.05-1.72.03-1.94.01-3.89.01-5.83-.01-4.25 0-8.5-.01-12.75z" />
                             </svg>
@@ -354,58 +647,63 @@
                 </div>
             </div>
         </section>
-
     </main>
+
+    <!-- BLOQUE 10 — CONTACTO -->
+    <footer id="contacto" class="bg-primary text-white pt-24 pb-12">
+        <div class="container mx-auto px-8 md:px-12 max-w-7xl">
+            <div class="grid lg:grid-cols-3 gap-20 mb-20">
+                <div class="space-y-8">
+                    <img src="assets/img/logo.png" alt="Logo" class="w-24 h-24 object-contain">
+                    <h3 class="font-fredoka text-3xl font-black">Lic. Adamna Mazú</h3>
+                    <p class="font-montserrat text-white/70 text-lg leading-relaxed">
+                        M.P. 688 | M.N. 82481. Atención presencial en Río Turbio y La Plata. Modalidad online para todo
+                        el país.
+                    </p>
+                </div>
+                <div class="space-y-8">
+                    <h4 class="font-fredoka text-xl font-bold uppercase border-b border-white/10 pb-2">Datos de contacto
+                    </h4>
+                    <ul class="space-y-5 font-montserrat">
+                        <li class="flex items-center gap-4 text-white/80">
+                            <span class="material-symbols-outlined text-accent-orange text-3xl">mail</span>
+                            <a href="mailto:mazuadamna@gmail.com"
+                                class="hover:text-accent-orange transition-colors">mazuadamna@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-4 text-white/80">
+                            <span class="material-symbols-outlined text-accent-orange text-3xl">call</span>
+                            <a href="https://wa.me/2966486745"
+                                class="hover:text-accent-orange transition-colors font-bold">+54 9 2966 486745</a>
+                        </li>
+                    </ul>
+                    <div class="pt-4 space-y-2">
+                        <div id="estado-horario"
+                            class="inline-block px-4 py-1 bg-white/10 rounded-full text-sm font-bold border border-white/20">
+                            Cargando horario...</div>
+                        <p id="proximo-horario" class="font-montserrat text-xs italic opacity-60"></p>
+                    </div>
+                </div>
+                <div class="h-64 rounded-[3rem] overflow-hidden shadow-2xl relative">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d-72.3333!3d-51.5333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDMyJzAwLjAiUyA3MsKwMjAnMDAuMCJX!5e0!3m2!1ses-419!2sar!4v1620000000000!5m2!1ses-419!2sar"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-white/10 pt-12 text-center font-montserrat text-xs text-white/40 uppercase tracking-[0.3em]">
+                <p>&copy; 2026 Lic. Adamna Mazú. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
     <a href="https://wa.me/2966486745" class="posicion-fixed" aria-label="Contactar por WhatsApp">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="50" height="50">
     </a>
 
-    <footer id="contacto" class="footer-principal">
-        <div class="footer-contenedor">
-            <div class="footer-info">
-                <img src="assets/img/logo.png" alt="Logo Lic. Adamna Mazú" class="footer-logo">
-                <h2 class="el-messiri">Lic. Adamna Mazú</h2>
-                <p class="footer-registro">M.P. 688 | M.N. 82481</p>
-                <div class="footer-detalles">
-                    <p><strong>Ubicación:</strong> San Martín 678, Río Turbio, Santa Cruz</p>
-                    <p><strong>Email:</strong> <a href="mailto:mazuadamna@gmail.com">mazuadamna@gmail.com</a></p>
-                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/2966486745">+54 9 2966 486745</a></p>
-                </div>
-            </div>
-
-            <div class="footer-horarios">
-                <h3 class="libre-baskerville">Horarios de atención</h3>
-                <p id="estado-horario" class="estado-horario">Cerrado</p>
-                <p id="proximo-horario" class="proximo-horario">Abre mañana a las 09:00</p>
-                <div class="horarios-lista">
-                    <p><span>Lunes a Viernes:</span> 09:00-13:00, 16:00-20:00</p>
-                    <p><span>Sábado:</span> 10:00-14:00</p>
-                    <p><span>Domingo:</span> Cerrado</p>
-                </div>
-            </div>
-
-            <div class="footer-mapa">
-                <h3 class="libre-baskerville">Encontranos aquí</h3>
-                <div class="mapa-contenedor">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d-72.3333!3d-51.5333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDMyJzAwLjAiUyA3MsKwMjAnMDAuMCJX!5e0!3m2!1ses-419!2sar!4v1620000000000!5m2!1ses-419!2sar"
-                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    <a href="https://maps.app.goo.gl/R5p9D2U5Zz9z9z9z9" target="_blank" class="enlace-mapa">Abrir en
-                        Google Maps</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2024 Lic. Adamna Mazú. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-
-    <script src="js/main.js"></script>
-    <script src="js/scroll.js"></script>
     <script src="js/horarios.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
