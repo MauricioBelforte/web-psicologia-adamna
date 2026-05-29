@@ -1150,6 +1150,51 @@ main {}
     opacity: 0.5;
 }
 
+.footer-credito {
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.footer-credito p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 0;
+}
+
+.footer-credito-separador {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.footer-credito-link {
+    color: rgba(255, 255, 255, 0.72);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-credito-link strong {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+}
+
+.footer-credito-link:hover {
+    color: rgba(255, 255, 255, 0.72);
+    text-decoration: none;
+}
+
+.footer-credito-link:focus-visible {
+    outline: 2px solid rgba(252, 155, 45, 0.8);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
 @media (max-width: 768px) {
     .footer-contenedor {
         text-align: center;
