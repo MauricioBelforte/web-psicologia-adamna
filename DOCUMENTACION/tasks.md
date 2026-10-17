@@ -20,7 +20,7 @@
 - [x] **0.1** Actualizar `datos_negocio.json` con los datos reales de la profesional: ✅
   - [x] Nombre: "Lic. Adamna Mazú"
   - [x] Matrículas: M.P. 688 / M.N. 82481
-  - [x] Teléfono WhatsApp: `+54 9 2966 486745`
+  - [x] Teléfono WhatsApp: `+54 9 2966 53-2702`
   - [x] Email: `mazuadamna@gmail.com`
   - [x] Dirección: Río Turbio + La Plata (presencial) + Online todo el país
   - [x] Instagram: `https://www.instagram.com/ada.psicologa/`
