@@ -261,7 +261,7 @@ main {}
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.067), rgba(0, 0, 0, 0.916)), url('../img/fondo_hero.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.067), rgba(0, 0, 0, 0.916));
     background-size: cover;
     background-position: center;
     color: var(--color-texto-hero);
@@ -991,7 +991,7 @@ main {}
 /* --- Sección Cierre --- */
 .seccion-cierre {
     padding: var(--espaciado-xl) 2rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../img/fondo_hero.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
